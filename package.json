@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "gulp",
+    "build": "gulp && terser --compress --mangle --mangle-props -- dist/js/library.js > dist/js/library.min.js",
     "lint": "eslint ./src/**/*.js --ext js",
     "clean": "rm -rf ./dist && mkdir dist",
     "lint:fix": "eslint --fix ./src/**/*.js",
@@ -54,7 +55,8 @@
     "rollup-plugin-browsersync": "^1.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-uglify-es": "0.0.1"
+    "rollup-plugin-uglify-es": "0.0.1",
+    "terser": "^5.7.0"
   },
   "dependencies": {
     "gulp-sourcemaps": "^2.6.5",
