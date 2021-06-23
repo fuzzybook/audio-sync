@@ -1,0 +1,18 @@
+.wait-box {
+    position: absolute;
+    display: none;
+    align-items: center;
+    background-color: transparent;
+    padding: 1rem;
+    z-index: $z-index + 999;
+  
+    &.show {
+      display: flex;
+    }
+  
+    .wait-box-popup {
+      img {
+        height: 128px;
+      }
+    }
+  }

@@ -1,0 +1,99 @@
+--- icons for move and schift
+--- no hover background, complete track background, hover .2 selected .4
+--- icons get by type
+
+---  NO --- selction click with timeout
+
+--- place zoom buttons on comander top display resolution es. 0.1sec
+
+--- selected track buttons: play/stop, move to cursor, pin, reset, delete, play from cursor
+
+--- moving or resizing track replay 
+
+--- NOT change tracks array (row inside track object)
+
+test window pins delimit working gap
+
+--- row get bounds min and max
+
+--- in row comander volume, button solo, mute, row volume selector, row pan selector
+
+--- track context menu
+
+
+add volume for complete row or mixer points?
+
+maybe create slider element or use range stylized
+
+--- resize canvas meter timeline on add or move track the last track + 10 seconds
+
+--- NOT USED ontext menu: trim, delete, cut at cursor , reload
+
+mixer point volume, main volume, pan , main pan, hight, middle, bass
+
+--- section for movie bestnaigation 
+
+--- altKey for moving slider timeline
+
+extract original track from video
+
+--- manage schenes
+
+trim track (resize buffer)
+
+stretch at cursor max %
+
+--- not move when locked
+
+
+
+infos:
+
+range
+https://codepen.io/thebabydino/pen/raqBMW
+https://codepen.io/thebabydino/pen/XJBPzd
+https://codepen.io/MyXoToD/pen/xGRrgQ
+
+vu-meter
+https://codepen.io/shawn00007/pen/wJddzp
+https://codepen.io/apatheticwes/project/editor/XLjrpD
+
+mixer
+https://codepen.io/altitudems/pen/KVZabv
+
+microphone
+https://codepen.io/Sambego/pen/VmBJJN
+
+checkbox
+https://codepen.io/Sambego/pen/zDLxe
+
+oflineaudio context
+https://stackoverflow.com/questions/49140159/extracting-audio-from-a-video-file
+https://github.com/audiojs/audio
+https://stackoverflow.com/questions/49140159/extracting-audio-from-a-video-file?noredirect=1&lq=1
+https://github.com/Jam3/audiobuffer-to-wav
+https://higuma.github.io/mp3-lame-encoder-js/
+https://www.russellgood.com/how-to-convert-audiobuffer-to-audio-file/
+https://github.com/zzarcon/microm
+https://www.clicktorelease.com/blog/loading-sounds-faster-using-html5-web-audio-api/
+
+debugging
+https://einar.slaskete.net/2011/09/05/adding-time-stamp-overlay-to-video-stream-using-ffmpeg/
+
+video upload
+https://code.tutsplus.com/tutorials/how-to-create-a-resumable-video-uploader-in-nodejs--net-25445
+
+create project
+upload movie and resample
+save projectload project
+
+video
+scenes
+tracks
+project setup
+project data
+
+
+
+terser --compress --mangle --mangle-props -- dist/js/library.js > dist/js/library.min.js
+as command

@@ -1,0 +1,23 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true
+        },
+        "sourceType": "module",
+        "ecmaVersion": 10
+    },
+    "rules": {
+        "indent": ["error", 2, { "SwitchCase": 1 }],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+        "semi": ["error", "never"],
+        "max-params": ["error", 7],
+        "comma-spacing": ["error", { "before": false, "after": true }],
+        "no-console": ["error", { "allow": ["log", "warn", "error"] }]
+    }
+}

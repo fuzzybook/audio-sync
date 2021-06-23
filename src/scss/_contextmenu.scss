@@ -1,0 +1,53 @@
+.track-context-menu-bg,
+.context-menu-bg {
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-index + 100;
+
+  &.show {
+    display: block;
+    .context-menu {
+      // display: block;
+    }
+  }
+  .track-context-menu,
+  .context-menu {
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 0.1rem;
+    min-width: 100px;
+    @include box_shadow(3);
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.1rem 0.5rem;
+      div:first-child{
+        display: flex;
+        align-items: center;
+        min-width: 150px;
+      }
+
+      i {
+        pointer-events: none;
+      }
+
+      span {
+        pointer-events: none;
+        margin-left: 0.5rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(#cccccc, 0.2);
+      }
+    }
+  }
+}

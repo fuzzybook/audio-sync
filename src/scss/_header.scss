@@ -1,0 +1,138 @@
+[editor-ref="editor-header"] {
+  min-height: 22px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  [editor-ref="main-player"] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: .5rem;
+    width: 100%;
+
+    .main-player {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+
+      .mat-btn {
+        margin-right: 1rem;
+
+        &.play {
+          box-shadow: none;
+          min-width: 38px;
+          min-height: 38px;
+          background-color: transparent;
+          border-radius: 50%;
+          padding: 0;
+          @include transition(background-color .5s .1s);
+
+          &:hover {
+            background-color: rgba($base-color, .2);
+
+            .material-icons {
+              font-weight: normal;
+            }
+          }
+
+          span {
+            .material-icons {
+              padding: 8px;
+              color: $base-color;
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+
+    .main-player-time {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      margin-right: 1rem;
+      font-size: 18px;
+      color: $base-color;
+      font-weight: bold;
+    }
+
+    .info-box {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      font-weight: bold;
+
+      &.hide {
+        display: none;
+      }
+
+      .mat-btn {
+        margin-right: 0;
+
+        &:hover {
+          &.disabled {
+            background-color: transparent !important;
+          }
+        }
+
+        &.disabled {
+          .material-icons {
+            color: $border-color !important;
+          }
+        }
+      }
+
+      .info-text {
+        margin-left: 0.5rem;
+        white-space: nowrap;
+
+        .title {
+          margin-right: 1rem;
+          font-size: 16px;
+          color: $base-color;
+
+        }
+
+        .time {
+          font-size: 14px;
+          color: $base-color;
+        }
+      }
+    }
+
+    .main-player-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-grow: 1;
+
+      .mat-btn {
+        margin-right: .2rem;
+      }
+
+      .main-player-zoom {
+        display: none;
+        justify-content: start;
+        align-items: center;
+        margin-right: 1rem;
+        font-size: 18px;
+        color: $base-color;
+      }
+
+      .main-player-buffer {
+        margin-right: 1rem;
+        font-size: 14px;
+        color: $base-color;
+      }
+    }
+  }
+
+  [editor-ref="debug"] {
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}

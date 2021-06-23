@@ -1,0 +1,72 @@
+.mat-btn {
+  position: relative;
+  display: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  background-color: rgba($base-color, .9);
+  color: white;
+
+  max-height: 20px;
+  max-width: 20px;
+
+  img {
+    height: 18px;
+    margin: 10px;
+  }
+
+  &.show {
+    display: block;
+  }
+
+  &.selected {
+    span {
+      i {
+        &.icon1 {
+          display: none;
+        }
+
+        &.icon2 {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: rgba($base-color, 1);
+    @include box_shadow(1);
+
+    i {
+      color: rgba(#ffffff, 1);
+      font-weight: bold;
+    }
+  }
+
+  &>* {
+    position: relative;
+  }
+
+  span {
+    display: block;
+    padding: 0px;
+
+    i {
+      color: rgba(#ffffff, .9);
+      font-size: 20px;
+
+      &.icon1 {
+        display: block;
+      }
+
+      &.icon2 {
+        display: none;
+      }
+    }
+  }
+}

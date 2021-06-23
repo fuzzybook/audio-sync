@@ -1,0 +1,6 @@
+/dest/**
+/node_modules/**
+/**/__test__
+rollup.config.js
+gulpfile.js
+

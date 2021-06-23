@@ -1,0 +1,166 @@
+//track window
+
+.track-box{
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  min-height: $row-height;
+  z-index: $z-index + 97;
+  background-color: rgba($base-color, 0.05);
+  box-shadow: inset 0px 0px 0px 1px rgba($base-color, .3);
+
+  .track-box-activator{
+    display:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    &.show{
+      display: block;
+    }
+  }
+
+  .track-box-header{
+    display: none;
+    justify-content: space-between;
+    height: $track-header-offset;
+    background-color: $base-color;
+    .track-box-drag {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &.down {
+        cursor: grabbing;
+      }
+      .track-box-drag-text{
+        display: none;
+        font-size: 12px;
+        margin-right: .5rem;
+        color:white;
+        &.show{
+          display: inline;
+        }
+      }
+      .track-box-drag-icon{
+        font-size: 18px;
+      }
+      
+    }
+    .track-box-mover{
+      height: 100%;
+      width: 100%
+    }
+  }
+
+  .track-box-waveform{
+    position: absolute;
+    pointer-events: none;
+    min-height: $row-height;
+    display: inline-block;
+  }
+  .track-box-info{
+    pointer-events: none;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    .track-box-info-icon{
+      margin-left: 0.2rem;
+      font-size: 18px;
+    }
+
+    .track-box-info-text{
+      pointer-events: none;
+      padding-left: 0.3rem;
+      font-size: 12px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+  }
+  .track-box-offset{
+    pointer-events: auto;
+    position: relative;
+    padding-left: 1px;
+    padding-right: 1px;
+    height: $row-height;
+  }
+
+  //
+  &.locked {
+    box-shadow: inset 0px 0px 0px 1px rgba($border-color, 1);
+    .track-box-header{
+      display: none;
+    }
+  }
+
+  &:hover {
+    background-color: rgba($base-color, 0.15);
+    cursor: pointer;
+  }
+
+  &.selected {
+    outline: none;
+    min-height: $row-height + $track-header-offset;
+    top: -$track-header-offset;
+    cursor: default;
+    box-shadow: inset 0px 0px 0px 2px rgba($base-color, .8);
+
+    .track-box-header{
+        display: flex;
+
+        .track-box-drag {
+          display: flex;
+          height: $track-header-offset;
+          background-color: $base-color;
+          font-size: 18px;
+          &:hover{
+            color: white;
+            cursor: grab;
+          }
+          &.down {
+            cursor: grabbing;
+          }
+        }
+      }
+
+    .track-box-mover{
+      &.down {
+        cursor: ew-resize;
+      }
+    }
+
+    &.locked {
+      box-shadow: inset 0px 0px 0px 1px rgba($border-color, 1);
+      .track-box-header{
+        .track-box-drag {
+          display: none;
+        }
+        pointer-events: none;
+        display: block;
+        background-color: $border-color;
+        box-shadow: inset 0px 0px 0px 1px rgba($border-color, 1);
+      }
+    }
+
+    .track-box-waveform{
+      pointer-events: auto;
+      display: block;
+    }
+
+    .track-box-offset{
+      pointer-events: auto;
+      display: block;
+      &.down {
+        cursor: col-resize;
+      }
+    }
+
+  }
+
+}
+
+/////////////////////////////////////

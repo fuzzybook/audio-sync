@@ -1,0 +1,172 @@
+.recorder-popup-box {
+    position: absolute;
+    display: none;
+    align-items: center;
+    background-color: white;
+    padding: 0;
+    width: 300px;
+    height: 160px;
+    z-index: $z-index + 1000;
+    box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.4);
+   
+    &.not-enabled{
+      background-color: white;
+      opacity: 1 !important;
+      color: #ccc!important;
+    }
+  
+    &.show {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border: 1px solid #ccc;
+      cursor: auto;
+    }
+
+    .record-btn {
+      position: relative;
+      display: none;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      border-width: 0;
+      outline: none;
+      background-color: white;
+      color: $base-color;
+      box-shadow: none;
+      min-width: 38px;
+      min-height: 38px;
+      max-height: 38px;
+      max-width: 38px;
+      background-color: transparent;
+      border-radius: 50%;
+      @include transition(background-color .5s .1s);
+    
+      &.show {
+        display: block;
+      }
+    
+      &.selected {
+        &.recorder{
+          background-color: rgba(red, .2);
+          i.icon2{
+            color: red;
+          }
+        }
+        i {
+          &.icon1 {
+            display: none;
+          }
+  
+          &.icon2 {
+            display: block;
+          }
+        }
+
+      }
+    
+      &:hover,
+      &:focus {
+        cursor: pointer!important;
+        background-color: rgba($base-color, .2);
+        &.selected {
+          &.recorder{
+            background-color: rgba(red, .2);
+          }
+        }
+        .material-icons {
+          font-weight: normal;
+        }
+      }
+    
+      &>* {
+        position: relative;
+      }
+    
+      .material-icons {
+        display: block;
+        padding: 8px;
+        color: $base-color;
+        font-size: 22px;
+  
+        &.icon1 {
+          display: block;
+        }
+  
+        &.icon2 {
+          display: none;
+        }
+      }
+
+      &.not-enabled{
+        background-color: white;
+        opacity: 1 !important;
+        i {
+          color: #ccc!important;
+        }
+      }
+    }
+  
+    .records-list {
+      padding: 0;
+      overflow: hidden;
+      margin-left: 5px;
+      margin-right: 5px;
+      height: 100px;
+      canvas{
+        background-color: rgba($base-color, .2);
+        &.recording{
+          background-color: rgba($base-color, 1);
+        }
+      }
+    }
+    .command-box{
+      display: flex;
+      padding: .5rem;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      .play-save{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .record-time{
+        font-size: 18px;
+        color: black!important;
+      }
+    }
+
+    &.disabled{
+      .delete-box{
+        &:hover{
+          background-color: #dddddd;
+          .delete{
+            color: #aaaaaa;
+            background-color: #dddddd;
+          }
+        }
+        .delete{
+          color: #dddddd;
+        }
+      }
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        margin-left: -23px;
+        bottom: -2em;
+        left: 50%;
+        box-sizing: border-box;
+        border: 1em solid black;
+        border-color: transparent transparent white white;
+        transform-origin: 0 0;
+        transform: rotate(-45deg);
+        box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.4);
+      }
+  }

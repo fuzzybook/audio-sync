@@ -1,0 +1,16 @@
+.volume-canvas {
+    position: absolute;
+    z-index: $z-index + 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $row-height;
+    // box-shadow: inset 0px 0px 0px 1px red;
+    display: none;
+    background-color: rgba(#006400, .1);
+    // cursor: crosshair;
+
+    &.show {
+        display: block;
+    }
+}
